@@ -1,0 +1,37 @@
+    window-rule {
+        geometry-corner-radius 10 // Set every window radius to 20
+        clip-to-geometry true
+	open-maximized false
+    }
+
+    layer-rule {
+        match namespace="^noctalia-wallpaper*"
+        place-within-backdrop true
+    }
+
+    //code
+    window-rule {
+    match app-id="code"
+    open-maximized true
+}
+
+    window-rule {
+    match app-id="discord"
+    open-maximized true
+}
+
+    window-rule {
+    match app-id="google-chrome"
+    open-maximized true
+}
+
+    window-rule {
+    match app-id="github-desktop"
+    open-maximized true
+}
+
+
+    window-rule {
+    match app-id="heroic"
+    open-maximized true
+}
