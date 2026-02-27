@@ -1,7 +1,11 @@
+workspace "1" //game
+workspace "2" //coding
+workspace "3" //browser-music
+
     window-rule {
         geometry-corner-radius 10 // Set every window radius to 20
         clip-to-geometry true
-	open-maximized false
+	    open-maximized true
     }
 
     layer-rule {
@@ -13,25 +17,42 @@
     window-rule {
     match app-id="code"
     open-maximized true
+    open-on-workspace "2"
 }
 
     window-rule {
     match app-id="discord"
     open-maximized true
+    open-on-workspace "3"
 }
 
     window-rule {
     match app-id="google-chrome"
     open-maximized true
+    open-on-workspace "3" 
+}
+
+
+	window-rule {
+	match app-id="kitty"
+	open-maximized false
 }
 
     window-rule {
-    match app-id="github-desktop"
-    open-maximized true
+    match app-id="steam"
+	open-on-workspace "1"
 }
-
 
     window-rule {
-    match app-id="heroic"
-    open-maximized true
+    match app-id="YouTube Music Desktop App"
+    open-maximized false
+	open-on-workspace "3"
 }
+
+    window-rule {
+    match app-id="GitHub Desktop"
+	open-on-workspace "2"
+}
+
+
+
