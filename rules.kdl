@@ -1,9 +1,6 @@
 workspace "1" // game
 workspace "2" //code
 workspace "3" // browser
-workspace "4" // discord - Music
-workspace "5"  // translation
-
 
 
 window-rule {
@@ -11,10 +8,10 @@ window-rule {
     clip-to-geometry true
     open-maximized true
     open-focused true
-    
-    background-effect {
-        blur true
+     background-effect {
+        blur false
     }
+    draw-border-with-background false 
 }
 
 layer-rule {
@@ -32,10 +29,11 @@ window-rule {
 
 window-rule {
     match app-id="code"
-    open-on-workspace "2"
+    open-on-workspace "3"
+    open-maximized true
     open-focused true
-
-    background-effect {
+      opacity 0.9
+     background-effect {
         blur true
     }
 }
@@ -43,7 +41,7 @@ window-rule {
 window-rule {
     match app-id="discord"
     open-maximized true
-    open-on-workspace "4"
+    open-on-workspace "2"
     open-focused false
 }
 
@@ -52,20 +50,20 @@ window-rule {
     open-maximized true
     open-on-workspace "3"
     open-focused false
+    draw-border-with-background true
 
-    background-effect {
-        blur true
-    }
 }
 
 window-rule {
     match app-id="kitty"
     open-maximized false
-
-    background-effect {
+    opacity 0.95
+        background-effect {
         blur true
     }
+    draw-border-with-background false    
 }
+
 
 window-rule {
     match app-id="steam"
@@ -83,31 +81,55 @@ window-rule {
 window-rule {
     match app-id="YouTube Music Desktop App"
     open-maximized true
-    open-on-workspace "4"
+    open-on-workspace "2"
     open-focused false
+    opacity 0.9
 }
 
 window-rule {
     match app-id="Spotify"
     open-maximized true
-    open-on-workspace "4"
+    open-on-workspace "2"
     open-focused false
+    opacity 0.9
 }
 
 window-rule {
     match app-id="GitHub Desktop"
-    open-on-workspace "2"
+    open-on-workspace "3"
+    opacity 0.97
 }
 
 window-rule {
     match app-id="antigravity"
-    open-on-workspace "2"
+    open-on-workspace "3"
+    background-effect {
+        blur true
+    }
 }
 
 window-rule {
+    match app-id="cursor"
+    open-on-workspace "3"
+    background-effect {
+        blur true
+    }
+}
+
+
+
+window-rule {
     match app-id="python3"
-    open-on-workspace "5"
+    open-on-workspace "2"
     open-focused false
     open-maximized true
 }
 
+window-rule {
+    match app-id="dolphin"
+    opacity 0.8
+    background-effect{
+        blur true
+    }
+}
+ 

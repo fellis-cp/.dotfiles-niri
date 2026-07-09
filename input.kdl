@@ -1,7 +1,8 @@
 // ────────────── Input Configuration ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 
-input {    
+input {
+    
     keyboard {
         xkb {
             layout "us" // Use the American keyboard layout
@@ -15,6 +16,7 @@ input {
     }
 
     focus-follows-mouse max-scroll-amount="100%" // Automatically focus windows under the mouse pointer
+
+    mouse
     //workspace-auto-back-and-forth true // Enable workspace back & forth switching
-    
 }
