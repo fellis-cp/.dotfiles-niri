@@ -1,13 +1,13 @@
-workspace "1" // game
-workspace "2" //code
-workspace "3" // browser
+workspace "daily" // 1
+workspace "code" //2
+workspace "game" // 3
 
 
 window-rule {
     geometry-corner-radius 12 // Set every window radius to 12
     clip-to-geometry true
     open-maximized true
-    open-focused false
+    open-focused true
     background-effect {
         blur false
     }
@@ -28,7 +28,7 @@ window-rule {
 
 window-rule {
     match app-id="code"
-    open-on-workspace "3"
+    open-on-workspace "code"
     open-maximized true
     open-focused true
       opacity 0.9
@@ -40,22 +40,25 @@ window-rule {
 window-rule {
     match app-id="discord"
     open-maximized true
-    open-on-workspace "2"
+    open-on-workspace "daily"
     open-focused false
 }
 
 window-rule {
     match app-id="google-chrome"
     open-maximized true
-    open-on-workspace "3"
+    open-on-workspace "daily"
     open-focused false
     draw-border-with-background true
+    default-column-display "tabbed"
 }
 
 window-rule {
     match app-id="kitty"
     open-maximized false
-    opacity 0.95
+    open-on-workspace "code"
+    default-column-display "tabbed"
+    opacity 0.75
         background-effect {
         blur true
     }
@@ -65,21 +68,23 @@ window-rule {
 
 window-rule {
     match app-id="steam"
-    open-on-workspace "1"
+    open-on-workspace "game"
     open-focused false
+    default-column-display "tabbed"
 }
 
 window-rule {
     match app-id="heroic"
     open-maximized true
-    open-on-workspace "1"
+    open-on-workspace "game"
+    default-column-display "tabbed"
     open-focused true
 }
 
 window-rule {
     match app-id="YouTube Music Desktop App"
     open-maximized true
-    open-on-workspace "2"
+    open-on-workspace "code"
     open-focused false
     opacity 0.9
 }
@@ -87,20 +92,20 @@ window-rule {
 window-rule {
     match app-id="Spotify"
     open-maximized true
-    open-on-workspace "2"
+    open-on-workspace "code"
     open-focused false
     opacity 0.9
 }
 
 window-rule {
     match app-id="GitHub Desktop"
-    open-on-workspace "3"
+    open-on-workspace "code"
     opacity 0.97
 }
 
 window-rule {
     match app-id="antigravity"
-    open-on-workspace "3"
+    open-on-workspace "code"
     background-effect {
         blur true
     }
@@ -108,7 +113,7 @@ window-rule {
 
 window-rule {
     match app-id="cursor"
-    open-on-workspace "3"
+    open-on-workspace "code"
     background-effect {
         blur true
     }
@@ -116,7 +121,7 @@ window-rule {
 
 window-rule {
     match app-id="python3"
-    open-on-workspace "2"
+    open-on-workspace "code"
     open-focused false
     open-maximized true
 }
@@ -124,6 +129,7 @@ window-rule {
 window-rule {
     match app-id="dolphin"
     opacity 0.8
+    open-on-workspace "daily"
     background-effect {
         blur true
     }
@@ -133,7 +139,6 @@ window-rule {
     match app-id="kate"
     opacity 0.93
     open-maximized false
-    open-focused true
     background-effect {
         blur true
     } 
