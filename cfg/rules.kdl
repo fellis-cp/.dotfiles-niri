@@ -1,6 +1,7 @@
-workspace "daily" // 1
-workspace "code" //2
-workspace "game" // 3
+workspace "dly" // 1
+workspace "wrk" //2
+workspace "str" //3
+
 
 
 window-rule {
@@ -12,6 +13,7 @@ window-rule {
         blur false
     }
     draw-border-with-background false 
+    default-column-display "tabbed"
 }
 
 layer-rule {
@@ -28,7 +30,7 @@ window-rule {
 
 window-rule {
     match app-id="code"
-    open-on-workspace "code"
+    open-on-workspace "wrk"
     open-maximized true
     open-focused true
       opacity 0.9
@@ -40,25 +42,27 @@ window-rule {
 window-rule {
     match app-id="discord"
     open-maximized true
-    open-on-workspace "daily"
-    open-focused false
+    open-on-workspace "str"
+    open-focused true
 }
 
 window-rule {
     match app-id="google-chrome"
     open-maximized true
-    open-on-workspace "daily"
-    open-focused false
+    open-on-workspace "dly"
+    open-focused true
     draw-border-with-background true
     default-column-display "tabbed"
 }
 
+
+
 window-rule {
     match app-id="kitty"
-    open-maximized false
-    open-on-workspace "code"
+    open-maximized true
+    open-on-workspace "wrk"
     default-column-display "tabbed"
-    opacity 0.75
+    opacity 0.6
         background-effect {
         blur true
     }
@@ -68,7 +72,7 @@ window-rule {
 
 window-rule {
     match app-id="steam"
-    open-on-workspace "game"
+    open-on-workspace "str"
     open-focused false
     default-column-display "tabbed"
 }
@@ -76,7 +80,7 @@ window-rule {
 window-rule {
     match app-id="heroic"
     open-maximized true
-    open-on-workspace "game"
+    open-on-workspace "str"
     default-column-display "tabbed"
     open-focused true
 }
@@ -84,7 +88,7 @@ window-rule {
 window-rule {
     match app-id="YouTube Music Desktop App"
     open-maximized true
-    open-on-workspace "code"
+    open-on-workspace "str"
     open-focused false
     opacity 0.9
 }
@@ -92,20 +96,20 @@ window-rule {
 window-rule {
     match app-id="Spotify"
     open-maximized true
-    open-on-workspace "code"
+    open-on-workspace "str"
     open-focused false
     opacity 0.9
 }
 
 window-rule {
     match app-id="GitHub Desktop"
-    open-on-workspace "code"
+    open-on-workspace "wrk"
     opacity 0.97
 }
 
 window-rule {
     match app-id="antigravity"
-    open-on-workspace "code"
+    open-on-workspace "wrk"
     background-effect {
         blur true
     }
@@ -113,7 +117,7 @@ window-rule {
 
 window-rule {
     match app-id="cursor"
-    open-on-workspace "code"
+    open-on-workspace "wrk"
     background-effect {
         blur true
     }
@@ -121,7 +125,7 @@ window-rule {
 
 window-rule {
     match app-id="python3"
-    open-on-workspace "code"
+    open-on-workspace "wrk"
     open-focused false
     open-maximized true
 }
@@ -129,7 +133,7 @@ window-rule {
 window-rule {
     match app-id="dolphin"
     opacity 0.8
-    open-on-workspace "daily"
+    open-on-workspace "dly"
     background-effect {
         blur true
     }
@@ -143,3 +147,39 @@ window-rule {
         blur true
     } 
 }
+
+window-rule {
+    match app-id="org.kde.plasma-systemmonitor"
+    opacity 0.8
+    open-maximized false
+    background-effect {
+        blur true
+    } 
+}
+
+window-rule {
+    match title="Konsole"
+    open-on-workspace "wrk"
+    open-floating false
+    open-maximized true
+    opacity 0.74
+    background-effect{
+        blur true
+    }
+}
+    
+window-rule {
+    match app-id="steam_app_default"
+    open-on-workspace "dly"
+    open-floating false
+ }
+ 
+window-rule {
+    match title="StarSavior"
+    open-on-workspace "dly"
+    open-floating true
+ }
+ 
+ 
+    
+

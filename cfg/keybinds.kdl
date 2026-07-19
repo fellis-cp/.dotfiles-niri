@@ -9,9 +9,9 @@ binds {
     Mod+Shift+ESCAPE                     { show-hotkey-overlay; }
 
     // ─── Applications ───
-    Mod+Return                          hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
-    Mod+Space                     hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+B                               hotkey-overlay-title="Open Browser: google-chrome" { spawn "google-chrome-stable"; }
+    Mod+Return                          hotkey-overlay-title="Open Terminal: konsole" { spawn "konsole"; }
+    Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+B                               hotkey-overlay-title="Open Browser: google-chrome-stable" { spawn "google-chrome-stable" "--password-store=kwallet6"; }
     Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Shift+Q                        hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
@@ -110,7 +110,7 @@ binds {
    //Mod+TAB                             { focus-workspace-previous; }
     Mod+TAB  hotkey-overlay-title="Open Terminal: rofi" { spawn "rofi" "-show" "window";}
     // ─── Layout Controls ───
-    Mod+F                          { switch-preset-column-width; }
+    Mod+F                               { switch-preset-column-width; }
     Mod+C                               { center-column; }
     Mod+CTRL+C                          { center-visible-columns; }
     Mod+Minus                           { set-column-width "-10%"; }
@@ -120,7 +120,7 @@ binds {
 
     // ─── Modes ───
     Mod+T                               { toggle-window-floating; }
-   //Mod+F                               { fullscreen-window; }
+    Mod+SHIFT+F                               { fullscreen-window; }
     Mod+W                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
