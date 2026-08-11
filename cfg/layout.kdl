@@ -1,5 +1,5 @@
     layout {
-        gaps 12 // Gap between windows
+        gaps 8 // Gap between windows
         center-focused-column "never" // Don’t auto-center focused column
 
         background-color "transparent" // <- needed for noctalia-shell to set wallpaper
@@ -8,7 +8,7 @@
             proportion 0.5
             proportion 1.0
         }
-
+    
         struts {
             left 4
             right 4            
@@ -22,12 +22,10 @@
         gap 5
         width 5
        //length total-proportion=1.0
-        position "top"
+        position "bottom"
     }
            
 }
-    
-    
     overview {
-       zoom  0.4
+       zoom  0.25
     }

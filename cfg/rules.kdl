@@ -1,11 +1,11 @@
-workspace "dly" // 1
+workspace "dly" //1
 workspace "wrk" //2
 workspace "str" //3
+workspace "gme" //4 floating
 
 
 
 window-rule {
-    geometry-corner-radius 12 // Set every window radius to 12
     clip-to-geometry true
     open-maximized true
     open-focused true
@@ -62,7 +62,7 @@ window-rule {
     open-maximized true
     open-on-workspace "wrk"
     default-column-display "tabbed"
-    opacity 0.6
+    opacity 0.76
         background-effect {
         blur true
     }
@@ -72,7 +72,8 @@ window-rule {
 
 window-rule {
     match app-id="steam"
-    open-on-workspace "str"
+    open-on-workspace "gme"
+    open-floating true
     open-focused false
     default-column-display "tabbed"
 }
@@ -167,18 +168,21 @@ window-rule {
         blur true
     }
 }
-    
-window-rule {
-    match app-id="steam_app_default"
-    open-on-workspace "dly"
-    open-floating false
- }
- 
+     
 window-rule {
     match title="StarSavior"
-    open-on-workspace "dly"
+    open-on-workspace "gme"
     open-floating true
  }
+
+ window-rule {
+        match app-id="dev.noctalia.Noctalia"
+        open-floating true
+        default-column-width { fixed 1080; }
+        default-window-height { fixed 920; }
+} 
+ 
+ 
  
  
     
