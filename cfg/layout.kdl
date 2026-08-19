@@ -9,10 +9,10 @@
             proportion 1.0
         }
     
-        struts {
-            left 4
-            right 4            
-        }
+       // struts {
+       //     left 4
+       //     right 4            
+       // }
     
         
     tab-indicator {
@@ -22,7 +22,7 @@
         gap 5
         width 5
        //length total-proportion=1.0
-        position "bottom"
+        position "top"
     }
            
 }

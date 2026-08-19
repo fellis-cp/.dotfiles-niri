@@ -21,7 +21,7 @@ binds {
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "noctalia msg panel-toggle session"; }
 
     // Please set the text editor of your choice.
-    // Mod+Shift+E                               hotkey-overlay-title="Open Text Editor: code" { spawn "code"; }
+    Mod+Shift+E                               hotkey-overlay-title="Open Text Editor: code" { spawn "code"; }
 
     // Please choose your own file manager.
     Mod+E                               hotkey-overlay-title="File Manager: dolphin" { spawn "dolphin"; }
@@ -36,6 +36,8 @@ binds {
     XF86AudioPrev                       allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
     XF86AudioPlay                       allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
     XF86AudioPause                      allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
+    Ctrl+Shift+v                        hotkey-overlay-title="open volume setting" { spawn-sh "noctalia msg panel-toggle control-center audio
+"; }
 
     // ─── Brightness Controls ───
     XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
@@ -158,7 +160,7 @@ binds {
     Mod+ESCAPE                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // ─── Exit / Power ───
-    CTRL+ALT+Delete                     { spawn ""; } // Also quits Niri
+    CTRL+ALT+Delete                     { spawn "plasma-systemmonitor"; } // Also quits Niri
     Mod+Shift+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
   
 }

@@ -13,7 +13,6 @@ window-rule {
         blur false
     }
     draw-border-with-background false 
-    default-column-display "tabbed"
 }
 
 layer-rule {
@@ -52,7 +51,6 @@ window-rule {
     open-on-workspace "dly"
     open-focused true
     draw-border-with-background true
-    default-column-display "tabbed"
 }
 
 
@@ -61,7 +59,6 @@ window-rule {
     match app-id="kitty"
     open-maximized true
     open-on-workspace "wrk"
-    default-column-display "tabbed"
     opacity 0.76
         background-effect {
         blur true
@@ -72,17 +69,15 @@ window-rule {
 
 window-rule {
     match app-id="steam"
-    open-on-workspace "gme"
-    open-floating true
+    open-on-workspace "str"
+    open-floating false
     open-focused false
-    default-column-display "tabbed"
 }
 
 window-rule {
     match app-id="heroic"
     open-maximized true
     open-on-workspace "str"
-    default-column-display "tabbed"
     open-focused true
 }
 
@@ -152,10 +147,11 @@ window-rule {
 window-rule {
     match app-id="org.kde.plasma-systemmonitor"
     opacity 0.8
-    open-maximized false
+    open-maximized true
     background-effect {
         blur true
     } 
+
 }
 
 window-rule {
@@ -183,7 +179,22 @@ window-rule {
 } 
  
  
- 
- 
-    
+window-rule {
+    match app-id="Zoom Workplace" title=".*menu.*"
+    open-floating true
+    min-width 250
+    open-focused true
+} 
 
+window-rule {
+    match app-id="Zoom Workplace" title=".*menu.*"
+    open-floating true
+    min-width 250
+    open-focused true
+} 
+
+window-rule {
+    match app-id="^steam_app_default$"
+    open-floating true
+    open-on-workspace "gme"
+}
