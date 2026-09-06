@@ -1,9 +1,6 @@
 workspace "dly" //1
 workspace "wrk" //2
-workspace "str" //3
-workspace "gme" //4 floating
-
-
+workspace "scratchpad" //
 
 window-rule {
     clip-to-geometry true
@@ -20,7 +17,6 @@ layer-rule {
     place-within-backdrop true
 }
 
-
 window-rule {
     match app-id="vlc"
     open-maximized false
@@ -29,11 +25,10 @@ window-rule {
 
 window-rule {
     match app-id="code"
-    open-on-workspace "wrk"
     open-maximized true
     open-focused true
-      opacity 0.9
-     background-effect {
+    opacity 0.9
+    background-effect {
         blur true
     }
 }
@@ -41,35 +36,29 @@ window-rule {
 window-rule {
     match app-id="discord"
     open-maximized true
-    open-on-workspace "str"
+    open-on-workspace "scratchpad"
     open-focused true
 }
 
 window-rule {
     match app-id="google-chrome"
     open-maximized true
-    open-on-workspace "dly"
     open-focused true
     draw-border-with-background true
 }
 
-
-
 window-rule {
     match app-id="kitty"
     open-maximized true
-    open-on-workspace "wrk"
-    opacity 0.76
-        background-effect {
+    opacity 0.9
+    background-effect {
         blur true
     }
     draw-border-with-background false    
 }
 
-
 window-rule {
     match app-id="steam"
-    open-on-workspace "str"
     open-floating false
     open-focused false
 }
@@ -77,35 +66,24 @@ window-rule {
 window-rule {
     match app-id="heroic"
     open-maximized true
-    open-on-workspace "str"
     open-focused true
-}
-
-window-rule {
-    match app-id="YouTube Music Desktop App"
-    open-maximized true
-    open-on-workspace "str"
-    open-focused false
-    opacity 0.9
 }
 
 window-rule {
     match app-id="Spotify"
     open-maximized true
-    open-on-workspace "str"
+    open-on-workspace "scratchpad"
     open-focused false
     opacity 0.9
 }
 
 window-rule {
     match app-id="GitHub Desktop"
-    open-on-workspace "wrk"
     opacity 0.97
 }
 
 window-rule {
     match app-id="antigravity"
-    open-on-workspace "wrk"
     background-effect {
         blur true
     }
@@ -113,7 +91,6 @@ window-rule {
 
 window-rule {
     match app-id="cursor"
-    open-on-workspace "wrk"
     background-effect {
         blur true
     }
@@ -121,7 +98,6 @@ window-rule {
 
 window-rule {
     match app-id="python3"
-    open-on-workspace "wrk"
     open-focused false
     open-maximized true
 }
@@ -129,7 +105,6 @@ window-rule {
 window-rule {
     match app-id="dolphin"
     opacity 0.8
-    open-on-workspace "dly"
     background-effect {
         blur true
     }
@@ -151,12 +126,10 @@ window-rule {
     background-effect {
         blur true
     } 
-
 }
 
 window-rule {
     match title="Konsole"
-    open-on-workspace "wrk"
     open-floating false
     open-maximized true
     opacity 0.74
@@ -164,26 +137,13 @@ window-rule {
         blur true
     }
 }
-     
-window-rule {
-    match title="StarSavior"
-    open-on-workspace "gme"
-    open-floating true
- }
 
- window-rule {
-        match app-id="dev.noctalia.Noctalia"
-        open-floating true
-        default-column-width { fixed 1080; }
-        default-window-height { fixed 920; }
-} 
- 
- 
+
 window-rule {
-    match app-id="Zoom Workplace" title=".*menu.*"
+    match app-id="dev.noctalia.Noctalia"
     open-floating true
-    min-width 250
-    open-focused true
+    default-column-width { fixed 1080; }
+    default-window-height { fixed 920; }
 } 
 
 window-rule {
@@ -196,5 +156,9 @@ window-rule {
 window-rule {
     match app-id="^steam_app_default$"
     open-floating true
-    open-on-workspace "gme"
+}
+
+window-rule {
+    match app-id="Free Download Manager"
+    open-floating true
 }
